@@ -24,6 +24,7 @@ def query_flows(
     regex: Optional[str] = None,
     tags_include: Optional[list[str]] = None,
     tags_exclude: Optional[list[str]] = None,
+    cursor: Optional[str] = None,
 ):
     """
     List flows for a given service in Tulip.
@@ -32,7 +33,11 @@ def query_flows(
     from api.flows import query_flows
 
     return query_flows(
-        service_name, regex=regex, tags_include=tags_include, tags_exclude=tags_exclude
+        service_name,
+        regex=regex,
+        tags_include=tags_include,
+        tags_exclude=tags_exclude,
+        cursor=cursor,
     )
 
 
