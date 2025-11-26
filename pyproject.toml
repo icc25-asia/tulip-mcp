@@ -5,6 +5,6 @@ description = "MCP for Tulip CTF platform"
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
+    "fastmcp>=2.13.1",
     "httpx>=0.28.1",
-    "mcp[cli]>=1.20.0",
 ]

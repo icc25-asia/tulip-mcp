@@ -1,5 +1,5 @@
 from typing import Optional
-from mcp.server.fastmcp import FastMCP
+from fastmcp import FastMCP
 
 from api.generic import get_services, get_tags
 
@@ -63,3 +63,9 @@ def export_flow_to_python_requests(flow_id: str) -> str:
     from api.export import export_to_python_requests
 
     return export_to_python_requests(flow_id)
+
+
+if __name__ == "__main__":
+    import os
+
+    mcp.run(transport="http", host=os.getenv("HOST", "0.0.0.0"))
